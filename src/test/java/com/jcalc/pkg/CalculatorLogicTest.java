@@ -38,5 +38,15 @@ public class CalculatorLogicTest {
 		// Then
 		Assert.assertTrue("this needs to be written", false);
 	}
+	
+	@Test
+	public void testMultiplyNumbers() {
+		// Given
+		
+		// When
+
+		// Then
+		Assert.assertTrue("this needs to be written", false);
+	}
 
 }
