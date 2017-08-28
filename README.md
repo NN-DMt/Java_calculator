@@ -12,10 +12,12 @@ request access from: @iostream
 
 
 Tools used:
-Java (JDK 1.8)
-JavaFX
-JUnit
-E(fx)clipse
-Eclipse
+Java (JDK 1.8),
+JavaFX,
+JUnit,
+E(fx)clipse,
+Eclipse,
+Git,
+Github Desktop
 
 
