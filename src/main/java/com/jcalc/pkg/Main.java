@@ -32,18 +32,30 @@ public class Main extends Application {
 				}
 			});
 			btn.setLayoutX(250);
-			btn.setLayoutY(220);	
-			btn.setText("1");
-			btn.setOnAction(new EventHandler<ActionEvent>() {
+			btn.setLayoutY(250);
+			Button btn1 = new Button();
+			btn1.setLayoutX(55);
+			btn1.setLayoutY(55);	
+			btn1.setText("1");
+			btn1.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
 					// total += 1; not able to use due to scope issues
 				}
 			});
-			btn.setLayoutX(250);
-			btn.setLayoutY(220);
+			Button btn2 = new Button();
+			btn2.setLayoutX(95);
+			btn2.setLayoutY(55);	
+			btn2.setText("2");
+			btn2.setOnAction(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent event) {
+					// total += 1; not able to use due to scope issues
+				}
+			});
 			root.getChildren().add(btn);
-			
+			root.getChildren().add(btn1);
+			root.getChildren().add(btn2);
 			primaryStage.show();
 
 		} catch (Exception e) {
