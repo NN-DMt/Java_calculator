@@ -27,4 +27,15 @@ public class CalculatorLogic {
 		return firstNum + secondNum;
 	}
 
+	public static int subtractTwoIntegers(int firstNum, int secondNum) {
+		return firstNum - secondNum;
+	}
+	
+	public static int divideTwoIntegers(int firstNum, int secondNum) {
+		return firstNum / secondNum;
+	}
+	
+	public static int multiplyTwoIntegers(int firstNum, int secondNum) {
+		return firstNum * secondNum;
+	}
 }
