@@ -1,10 +1,10 @@
 package com.jcalc.pkg;
 
-public class equationStringParser {
+public class EquationStringParser {
 	private String eqString;
 
-	public equationStringParser(String equationString) {
-		this.eqString = equationString;
+	public EquationStringParser(String equationString) {
+		this.eqString = equationString.trim();
 	}
 
 	// this is called hacked together code. It works but it's not pretty.
@@ -17,10 +17,11 @@ public class equationStringParser {
 		String secondNum = null;
 		for (int i = 0; i < eqString.length(); i++) {
 			boolean firstNumberFound = false;
-			while (!firstNumberFound && !Character.isDigit(i)) {
+	        /*while (!firstNumberFound && Character.isDigit(eqString.charAt(i))) {
 				continue;
-			}
+			}*/
 			if (firstNum == null) {
+				firstNumberFound = true;
 				firstNum = eqString.substring(i, i + 1);
 			} else if (secondNum == null) {
 				secondNum = eqString.substring(i, i + 1);
@@ -32,18 +33,9 @@ public class equationStringParser {
 				secondNum = null;
 				operator = null;
 			}
+			finalTotal += currentTotal;
 		}
-
-		// for(char c : eqString.toCharArray()) {
-		// while(!c.isNumeri)
-		//
-		// if(c == '*') {
-		//
-		// }
-		//
-		// }
-
-		return 0.0d;
+		return finalTotal;
 	}
 
 	private static double returnCurrentCalculation(String firstNum, String operator, String secondNum) {

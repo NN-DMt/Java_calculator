@@ -20,7 +20,9 @@ public class CalculatorLogic {
 			System.out.println("not able to get user input as int");
 			return;
 		}
-		System.out.println("the answer is: " + addTwoIntegers(firstNum, secondNum));
+		EquationStringParser eq = new EquationStringParser(firstNum + "+" + secondNum);
+		System.out.println("the answer is: " + eq.parseEqToDouble(firstNum + "+" + secondNum));
+		//System.out.println("the answer is: " + addTwoIntegers(firstNum, secondNum));
 	}
 
 	public static int addTwoIntegers(int firstNum, int secondNum) {

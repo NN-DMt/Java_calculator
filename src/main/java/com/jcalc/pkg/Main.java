@@ -31,7 +31,6 @@ public class Main extends Application {
 			});
 			btn.setLayoutX(250);
 			btn.setLayoutY(250);
-			
 			Button btn1 = new Button();
 			btn1.setLayoutX(85);
 			btn1.setLayoutY(85);	
@@ -122,7 +121,6 @@ public class Main extends Application {
 					total += 9;
 				}
 			});
-			
 			Button addBtn = new Button();
 			addBtn.setLayoutX(175);
 			addBtn.setLayoutY(85);
@@ -133,7 +131,6 @@ public class Main extends Application {
 					equationString += "+";
 				}
 			});
-			
 			Button minusBtn = new Button();
 			minusBtn.setLayoutX(175);
 			minusBtn.setLayoutY(115);
@@ -144,7 +141,6 @@ public class Main extends Application {
 					equationString += "-";
 				}
 			});
-			
 			Button divideBtn = new Button();
 			divideBtn.setLayoutX(175);
 			divideBtn.setLayoutY(145);
@@ -155,7 +151,6 @@ public class Main extends Application {
 					equationString += "/";
 				}
 			});
-			
 			Button multiplyBtn = new Button();
 			multiplyBtn.setLayoutX(175);
 			multiplyBtn.setLayoutY(175);
@@ -189,13 +184,11 @@ public class Main extends Application {
 			root.getChildren().add(divideBtn);
 			root.getChildren().add(multiplyBtn);
 			root.setStyle("-fx-background-color: #00b359");
-			
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 	public static void main(String[] args) {
 		launch(args);
 	}
