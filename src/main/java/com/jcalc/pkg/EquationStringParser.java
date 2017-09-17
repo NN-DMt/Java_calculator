@@ -18,6 +18,7 @@ public class EquationStringParser {
 			double secondNum = 0.0d;
 			double finalTotal = 0.0d;
 			double currentTotal = 0.0d;
+			boolean first = true;
 			String operator = null;
 			for(String s : eqTokens) {
 				if (firstNum == 0.0d) {
@@ -26,9 +27,15 @@ public class EquationStringParser {
 					operator = s;
 				} else if (secondNum == 0.0d) {
 					secondNum = Double.parseDouble(s);
-				} else {
-					currentTotal = returnCurrentCalculation(firstNum, operator, secondNum);
-					firstNum = 0.0d;
+				}
+				if(firstNum != 0.0d && secondNum != 0.0d && operator != null){
+					if(first) {
+						currentTotal = returnCurrentCalculation(firstNum, operator, secondNum);
+					} else {
+						currentTotal = returnCurrentCalc(firstNum, operator, secondNum);
+					}
+					first = false;
+					firstNum = secondNum;
 					secondNum = 0.0d;
 					operator = null;
 					finalTotal += currentTotal;
@@ -47,6 +54,22 @@ public class EquationStringParser {
 			currentAnswer = firstNum + secondNum;
 		} else if (operator.equalsIgnoreCase("/")) {
 			currentAnswer = firstNum / secondNum;
+		} else {
+			System.out.println("operator not recognised, please try again");
+		}
+		return currentAnswer;
+	}
+	
+	private static double returnCurrentCalc(Double firstNum, String operator, Double secondNum) {
+		double currentAnswer = 0.0d;
+		if(operator.equalsIgnoreCase("*")) {
+			currentAnswer *= secondNum; 
+		} else if (operator.equalsIgnoreCase("-")) {
+			currentAnswer -= secondNum;
+		} else if (operator.equalsIgnoreCase("+")) {
+			currentAnswer += secondNum;
+		} else if (operator.equalsIgnoreCase("/")) {
+			currentAnswer /= secondNum;
 		} else {
 			System.out.println("operator not recognised, please try again");
 		}
