@@ -2,54 +2,53 @@ package com.jcalc.pkg;
 
 public class EquationStringParser {
 	private String eqString;
-
+	private String[] eqTokens;
+	
 	public EquationStringParser(String equationString) {
 		this.eqString = equationString.trim();
+		this.eqTokens = eqString.split(" ");
+	}
+	
+	public EquationStringParser(String[] equationTokens) {
+		this.eqTokens = equationTokens;
 	}
 
-	// this is called hacked together code. It works but it's not pretty.
-	public double parseEqToDouble(String eqString) {
-		double finalTotal = 0.00d;
-		double currentTotal = 0.0d;
-		String currentCalc = "";
-		String firstNum = null;
-		String operator = null;
-		String secondNum = null;
-		for (int i = 0; i < eqString.length(); i++) {
-			boolean firstNumberFound = false;
-	        /*while (!firstNumberFound && Character.isDigit(eqString.charAt(i))) {
-				continue;
-			}*/
-			if (firstNum == null) {
-				firstNumberFound = true;
-				firstNum = eqString.substring(i, i + 1);
-			} else if (secondNum == null) {
-				secondNum = eqString.substring(i, i + 1);
-			} else if (operator == null) {
-				operator = eqString.substring(i,i +1);
-			} else {
-				currentTotal = returnCurrentCalculation(firstNum, operator, secondNum);
-				firstNum = null;
-				secondNum = null;
-				operator = null;
+	public double parseEqToDouble() {
+			double firstNum = 0.0d;
+			double secondNum = 0.0d;
+			double finalTotal = 0.0d;
+			double currentTotal = 0.0d;
+			String operator = null;
+			for(String s : eqTokens) {
+				if (firstNum == 0.0d) {
+					firstNum = Double.parseDouble(s);
+				} else if (operator == null) {
+					operator = s;
+				} else if (secondNum == 0.0d) {
+					secondNum = Double.parseDouble(s);
+				} else {
+					currentTotal = returnCurrentCalculation(firstNum, operator, secondNum);
+					firstNum = 0.0d;
+					secondNum = 0.0d;
+					operator = null;
+					finalTotal += currentTotal;
+				}
 			}
-			finalTotal += currentTotal;
-		}
 		return finalTotal;
 	}
 
-	private static double returnCurrentCalculation(String firstNum, String operator, String secondNum) {
+	private static double returnCurrentCalculation(Double firstNum, String operator, Double secondNum) {
 		double currentAnswer = 0.0d;
-		double firstNumAsDouble = Double.parseDouble(firstNum);
-		double secondNumAsDouble = Double.parseDouble(secondNum);
 		if(operator.equalsIgnoreCase("*")) {
-			currentAnswer = firstNumAsDouble * secondNumAsDouble; 
+			currentAnswer = firstNum * secondNum; 
 		} else if (operator.equalsIgnoreCase("-")) {
-			currentAnswer = firstNumAsDouble - secondNumAsDouble;
+			currentAnswer = firstNum - secondNum;
 		} else if (operator.equalsIgnoreCase("+")) {
-			currentAnswer = firstNumAsDouble + secondNumAsDouble;
+			currentAnswer = firstNum + secondNum;
 		} else if (operator.equalsIgnoreCase("/")) {
-			currentAnswer = firstNumAsDouble / secondNumAsDouble;
+			currentAnswer = firstNum / secondNum;
+		} else {
+			System.out.println("operator not recognised, please try again");
 		}
 		return currentAnswer;
 	}
