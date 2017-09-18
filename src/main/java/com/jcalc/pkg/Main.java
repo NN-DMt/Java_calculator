@@ -1,14 +1,11 @@
 package com.jcalc.pkg;
 
+import java.net.URL;
+
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Box;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -17,8 +14,14 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			FXMLController fxmlController = new FXMLController();
+			/*FXMLLoader loader = new FXMLLoader();
+			URL locationURL = new URL("http://javafx.com/fxml/1");
+			loader.setLocation(locationURL);
+			loader.setController(fxmlController);
+			AnchorPane root = loader.load();*/
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("JCalc.fxml"));
-			Scene scene = new Scene(root, 350, 350);
+			Scene scene = new Scene(root, 330, 350);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("JCalc - JavaFX calculator");
 			primaryStage.setScene(scene);

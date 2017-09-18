@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="297.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="297.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jcalc.pkg.FXMLController">
    <children>
       <Canvas height="334.0" layoutX="-2.0" width="340.0">
          <effect>
@@ -19,25 +19,25 @@
             <Cursor fx:constant="N_RESIZE" />
          </cursor>
       </Canvas>
-      <Button layoutX="263.0" layoutY="282.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="=" />
-      <Button layoutX="111.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="7" />
-      <Button layoutX="161.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="8" />
-      <Button layoutX="214.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="3" />
-      <Button layoutX="162.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="2" />
-      <Button layoutX="214.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="6" />
-      <Button layoutX="111.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="1" />
-      <Button layoutX="162.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="5" />
-      <Button layoutX="111.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="4" />
-      <Button layoutX="214.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="9" />
+      <Button layoutX="263.0" layoutY="282.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="=" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="7" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="161.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="8"  fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="3" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="2" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="6" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="1" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="5" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="4" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="9" fx:id="1" onMouseClicked="#addValueToEqString"/>
       <Label layoutX="122.0" layoutY="14.0" prefHeight="35.0" prefWidth="159.0" text="JavaFX Calculator " />
-      <Button layoutX="263.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="+" />
-      <Button layoutX="263.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="-" />
-      <Button layoutX="263.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="*" />
-      <Button layoutX="263.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="/" />
-      <Button layoutX="162.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="0" />
-      <Button layoutX="214.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="." />
-      <Button layoutX="111.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="CE" />
-      <TextField layoutX="113.0" layoutY="49.0" prefHeight="35.0" prefWidth="186.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="380.0" layoutX="-1.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="78.0" />
+      <Button layoutX="263.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="+" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="-" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="*" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="/" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="0" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="." fx:id="1" onMouseClicked="#addValueToEqString" />
+      <Button layoutX="111.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="CE" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <TextField fx:id="output" layoutX="113.0" layoutY="49.0" prefHeight="35.0" prefWidth="186.0"/>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKGREEN" height="380.0" layoutX=-1.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="78.0" />
    </children>
 </AnchorPane>
