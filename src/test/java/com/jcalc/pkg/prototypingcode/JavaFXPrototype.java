@@ -1,5 +1,7 @@
 package com.jcalc.pkg.prototypingcode;
 
+import com.jcalc.pkg.FXMLController;
+
 public class JavaFXPrototype {
 
 	/* v1 */
@@ -200,6 +202,14 @@ public class JavaFXPrototype {
 		}
 	}*/
 
+	/*FXMLLoader loader = new FXMLLoader();
+	URL locationURL = new URL("http://javafx.com/fxml/1");
+	loader.setLocation(locationURL);
+	loader.setController(fxmlController);
+	AnchorPane root = loader.load();*/
+	
+	//FXMLController fxmlController = new FXMLController();
+	//root.setStyle("-fx-background-color: #00b359");
 	
 	
 }

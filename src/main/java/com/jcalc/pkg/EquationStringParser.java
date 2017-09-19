@@ -6,7 +6,11 @@ public class EquationStringParser {
 	
 	public EquationStringParser(String equationString) {
 		this.eqString = equationString.trim();
+		System.out.println("EqString");
 		this.eqTokens = eqString.split(" ");
+		for(String s : eqTokens) {
+			System.out.println("Eq token " + s);
+		}
 	}
 	
 	public EquationStringParser(String[] equationTokens) {
@@ -23,7 +27,7 @@ public class EquationStringParser {
 			for(String s : eqTokens) {
 				if (firstNum == 0.0d) {
 					firstNum = Double.parseDouble(s);
-				} else if (operator == null) {
+				} else if (operator == null && !Character.isDigit(s.substring(0,1).toCharArray()[0])) {
 					operator = s;
 				} else if (secondNum == 0.0d) {
 					secondNum = Double.parseDouble(s);

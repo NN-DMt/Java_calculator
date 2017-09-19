@@ -19,7 +19,7 @@
             <Cursor fx:constant="N_RESIZE" />
          </cursor>
       </Canvas>
-      <Button layoutX="263.0" layoutY="282.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="=" fx:id="equals" onMouseClicked="#calculateTotal"/>
+      <Button layoutX="263.0" layoutY="282.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="=" fx:id="equals" onMouseClicked="#addValueToEqString"/>
       <Button layoutX="111.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="7" fx:id="7" onMouseClicked="#addValueToEqString"/>
       <Button layoutX="161.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="8"  fx:id="8" onMouseClicked="#addValueToEqString"/>
       <Button layoutX="214.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="3" fx:id="3" onMouseClicked="#addValueToEqString"/>
@@ -37,7 +37,7 @@
       <Button layoutX="162.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="0" fx:id="0" onMouseClicked="#addValueToEqString"/>
       <Button layoutX="214.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="." fx:id="decimalPoint" onMouseClicked="#addValueToEqString" />
       <Button layoutX="111.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="CE" fx:id="CE" onMouseClicked="#addValueToEqString"/>
-      <TextField fx:id="output" layoutX="113.0" layoutY="49.0" prefHeight="35.0" prefWidth="186.0" fx:id="calculatorDisplay"/>
-	  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKBLUE" height="380.0" layoutX="-1.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="78.0" />
+      <TextField fx:id="output" layoutX="113.0" layoutY="49.0" prefHeight="35.0" prefWidth="186.0"/>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKGREEN" height="380.0" layoutX=-1.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="78.0" />
    </children>
 </AnchorPane>
