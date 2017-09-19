@@ -6,11 +6,10 @@ public class EquationStringParser {
 	
 	public EquationStringParser(String equationString) {
 		this.eqString = equationString.trim();
-		System.out.println("EqString");
 		this.eqTokens = eqString.split(" ");
-		for(String s : eqTokens) {
+	/*	for(String s : eqTokens) {
 			System.out.println("Eq token " + s);
-		}
+		}*/
 	}
 	
 	public EquationStringParser(String[] equationTokens) {

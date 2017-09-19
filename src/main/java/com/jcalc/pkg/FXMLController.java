@@ -13,14 +13,9 @@ public class FXMLController {
 	@FXML
 	private TextField output;
 	static String eqString = "";
-	
-	// Add a FXML object here, to use as a reference to the display, then print the value of
-	// eqString to it.
 
 	@FXML
 	protected void addValueToEqString(MouseEvent button) {
-		System.out.print(button.getSource().toString().substring(button.getSource().toString().length() - 2,
-				button.getSource().toString().length() - 1));
 		this.eqString += Character
 				.isDigit((Character) button.getSource().toString()
 						.substring(button.getSource().toString().length() - 2,
@@ -30,13 +25,20 @@ public class FXMLController {
 										button.getSource().toString().length() - 1)
 								: " " + button.getSource().toString().substring(button.getSource().toString().length() - 2,
 										button.getSource().toString().length() - 1) + " ";
-								
+		output.setText(Character
+				.isDigit((Character) button.getSource().toString()
+						.substring(button.getSource().toString().length() - 2,
+								button.getSource().toString().length() - 1)
+						.toCharArray()[0])
+								? output.getText() + button.getSource().toString().substring(button.getSource().toString().length() - 2,
+										button.getSource().toString().length() - 1)
+								: output.getText() + " " + button.getSource().toString().substring(button.getSource().toString().length() - 2,
+										button.getSource().toString().length() - 1) + " ");
 	}
 	
 	@FXML
 	protected void addEqStringToScreen() {
 	
-		
 	}
 	
 	@FXML
@@ -44,16 +46,23 @@ public class FXMLController {
 		EquationStringParser eSP = new EquationStringParser(eqString);
 		Double answer = eSP.parseEqToDouble();
 		System.out.println("\nThe total is: " + answer);
-		return "total";
+		output.setText(answer.toString());
+		eqString = "";
+		return answer.toString();
 	}
 
 	@FXML
 	protected void btnClicked(ActionEvent event) {
 		// String s = event.getSource();
 		output.setText("1");
-		System.out.println("1");
 	}
 
+	@FXML
+	protected void clearDisplay() {
+		output.setText("");
+		eqString = "";
+	}
+	
 	public FXMLController() {
 
 	}
