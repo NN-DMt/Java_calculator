@@ -240,8 +240,33 @@ public class Prototype_code {
 			}
 			return currentAnswer;
 		}
-	}*/
+}*/
+		
+	// from calculator logic class
+	public static int addTwoIntegers(int firstNum, int secondNum) {
+		return firstNum + secondNum;
+	}
 
+	public static int subtractTwoIntegers(int firstNum, int secondNum) {
+		return firstNum - secondNum;
+	}
+	
+	public static int divideTwoIntegers(int firstNum, int secondNum) {
+		return firstNum / secondNum;
+	}
+	
+	public static int multiplyTwoIntegers(int firstNum, int secondNum) {
+		return firstNum * secondNum;
+	}
+	
+	public static int squareNumber(int firstNum) {
+		return firstNum * firstNum;
+	}
+	
+	public static int squareRootTwoIntegers(int firstNum, int secondNum) {
+		// work on logic for this. Not sure how to just yet.
+		return firstNum / secondNum;
+	}
 	
 	
 	

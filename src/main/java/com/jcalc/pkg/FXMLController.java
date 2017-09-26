@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+// needs refactoring to use MVC (right now it's (MC)V)
 public class FXMLController {
 
 	@FXML
@@ -16,31 +17,40 @@ public class FXMLController {
 
 	@FXML
 	protected void addValueToEqString(MouseEvent button) {
-		this.eqString += Character
-				.isDigit((Character) button.getSource().toString()
+		if (String
+				.valueOf(button.getSource().toString()
 						.substring(button.getSource().toString().length() - 2,
 								button.getSource().toString().length() - 1)
 						.toCharArray()[0])
-								? button.getSource().toString().substring(button.getSource().toString().length() - 2,
-										button.getSource().toString().length() - 1)
-								: " " + button.getSource().toString().substring(button.getSource().toString().length() - 2,
-										button.getSource().toString().length() - 1) + " ";
-		output.setText(Character
-				.isDigit((Character) button.getSource().toString()
+				.equals(".") && !eqString.endsWith(".")) {
+			FXMLController.eqString += ".";
+		} else {
+			FXMLController.eqString += Character
+					.isDigit((Character) button.getSource().toString()
+							.substring(button.getSource().toString().length() - 2,
+									button.getSource().toString().length() - 1)
+							.toCharArray()[0])
+									? button.getSource().toString().substring(
+											button.getSource().toString().length() - 2,
+											button.getSource().toString().length() - 1)
+									: " " + button.getSource().toString().substring(
+											button.getSource().toString().length() - 2,
+											button.getSource().toString().length() - 1) + " ";
+		}
+		output.setText(
+				Character.isDigit((Character) button.getSource().toString()
 						.substring(button.getSource().toString().length() - 2,
 								button.getSource().toString().length() - 1)
-						.toCharArray()[0])
-								? output.getText() + button.getSource().toString().substring(button.getSource().toString().length() - 2,
+						.toCharArray()[0]) ? output.getText()
+								+ button.getSource().toString().substring(button.getSource().toString().length() - 2,
 										button.getSource().toString().length() - 1)
-								: output.getText() + " " + button.getSource().toString().substring(button.getSource().toString().length() - 2,
-										button.getSource().toString().length() - 1) + " ");
+								: output.getText() + " "
+										+ button.getSource().toString().substring(
+												button.getSource().toString().length() - 2,
+												button.getSource().toString().length() - 1)
+										+ " ");
 	}
-	
-	@FXML
-	protected void addEqStringToScreen() {
-	
-	}
-	
+
 	@FXML
 	protected String calculateTotal() {
 		EquationStringParser eSP = new EquationStringParser(eqString);
@@ -52,19 +62,9 @@ public class FXMLController {
 	}
 
 	@FXML
-	protected void btnClicked(ActionEvent event) {
-		// String s = event.getSource();
-		output.setText("1");
-	}
-
-	@FXML
 	protected void clearDisplay() {
 		output.setText("");
 		eqString = "";
-	}
-	
-	public FXMLController() {
-
 	}
 
 	public void initalize(URL arg0, ResourceBundle arg1) {
