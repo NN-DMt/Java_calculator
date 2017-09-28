@@ -7,10 +7,10 @@ public class EquationStringParser {
 	public EquationStringParser(String equationString) {
 		this.eqString = equationString.trim();
 		this.eqTokens = eqString.split(" ");
-		System.out.println("eqString: " + this.eqString);
+	/*	System.out.println("eqString: " + this.eqString);
 		for(String s : eqTokens) {
 			System.out.println("Eq token " + s);
-		}
+		}*/
 	}
 	
 	public EquationStringParser(String[] equationTokens) {
