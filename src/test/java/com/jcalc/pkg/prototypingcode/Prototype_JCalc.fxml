@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="297.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jcalc.pkg.FXMLController">
+   <children>
+      <Canvas height="334.0" layoutX="-2.0" width="340.0">
+         <effect>
+            <Shadow color="RED" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="N_RESIZE" />
+         </cursor>
+      </Canvas>
+      <Button layoutX="263.0" layoutY="282.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="=" fx:id="equals" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="7" fx:id="7" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="161.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="8"  fx:id="8" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="3" fx:id="3" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="2" fx:id="2" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="6" fx:id="6" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="1" fx:id="1" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="5" fx:id="5" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="111.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="4" fx:id="4" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="9" fx:id="9" onMouseClicked="#addValueToEqString"/>
+      <Label layoutX="122.0" layoutY="14.0" prefHeight="35.0" prefWidth="159.0" text="JavaFX Calculator " />
+      <Button layoutX="263.0" layoutY="99.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="+" fx:id="plus" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="144.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="-" fx:id="minus" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="192.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="*" fx:id="multiply" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="263.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="/" fx:id="divide" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="162.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="0" fx:id="0" onMouseClicked="#addValueToEqString"/>
+      <Button layoutX="214.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="." fx:id="decimalPoint" onMouseClicked="#addValueToEqString" />
+      <Button layoutX="111.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" text="CE" fx:id="CE" onMouseClicked="#addValueToEqString"/>
+      <TextField fx:id="output" layoutX="113.0" layoutY="49.0" prefHeight="35.0" prefWidth="186.0"/>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKGREEN" height="380.0" layoutX=-1.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="78.0" />
+   </children>
+</AnchorPane>

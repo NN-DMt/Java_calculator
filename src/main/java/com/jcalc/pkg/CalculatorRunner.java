@@ -19,7 +19,4 @@ public class CalculatorRunner {
 		EquationStringParser eq = new EquationStringParser(inputEquation);
 		System.out.println("the answer is: " + eq.parseEqToDouble());
 	}
-	
-	
-	
 }
